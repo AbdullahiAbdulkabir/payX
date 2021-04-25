@@ -26,8 +26,8 @@
         <ul class="nav">
         	<li class="text-center">
         		<img src="https://picsum.photos/536/354" width="200px" class="rounded-circle">
-        		<h4>Abdullahi A</h4>
-        		<p>Admin</p>
+        		<h4>Luisa Becky</h4>
+        		<p>HR</p>
         	</li>
           <li class="active ">
             <a href="./">
@@ -36,36 +36,29 @@
             </a>
           </li>
           <li>
-            <a href="admin-profile.html">
+            <a href="">
              <i class="fa fa-user"></i>
-              <p>Admin Profile</p>
+              <p>My Profile</p>
             </a>
           </li>
           <li>
-            <a href="./">
+            <a href="">
              <i class="fas fa-users"></i>
-              <p>Add a User</p>
+              <p>Payment & Approvals</p>
             </a>
           </li>
           <li>
             <a href="">
               <i class="fa fa-user"></i>
-              <p>Remove a User</p>
+              <p>Regulations update</p>
             </a>
           </li>
           <li>
             <a href="">
               <i class="fa fa-user"></i>
-              <p>User Profile</p>
+              <p>Daily Login</p>
             </a>
           </li>
-          <li>
-            <a href="">
-               <i class="fas fa-users"></i></i>
-              <p>Get Users</p>
-            </a>
-          </li>
-          
         </ul>
       </div>
     </div>
@@ -113,48 +106,94 @@
           <div class="col-md-12">
             <div class="card-tasks">
                <div class="card-title">
-                <h3 class="mt-5">Add a User</h3>
-                <div class="form-group col-6">
-				     
-				      <select id="select" class="form-control">
-				        <option>Choose a user</option>
-				        <option>Admin</option>
-				        <option>Company Admin</option>
-				        <option>Company Employee</option>
-				      </select>
-				</div>
+                
                 </div>
               </div>
               <div class="card-body ">
-              	<form class="mx-auto my-auto col-mx-12">
-				  <fieldset >
-				    <div class="form-group">
-				      <label for="ExampleInput"> Full Name</label>
-				      <input type="text" id="TextInput" class="form-control" name="fullname" placeholder="Abdullahi A">
-				    </div>
-				    <div class="form-group">
-				      <label for="ExampleInput"> Username</label>
-				      <input type="text" id="TextInput" class="form-control" name="username" placeholder="bro">
-				    </div>
-				    <div class="form-group">
-				      <label for="ExampleInput"> Email</label>
-				      <input type="email" id="TextInput" class="form-control" name="email" placeholder="example@gmail.com">
-				    </div>
+          <div class="row">
+            <div class="col-md-6">
 
-				    <div class="form-group">
-				      <label for="NumberInput"> Phone Number</label>
-				      <input type="phone" id="TextInput" class="form-control" name="phone" placeholder="+911319312">
-				    </div>
-				    
-				    <button type="submit" style="background-color: #d0b2c8;" class="btn pull-right ">Add HR</button>
-				    <button type="submit" style="background-color: #d0b2c8;" class="btn pull-right mr-5">Add Employee</button>
-				  </fieldset>
-				</form>
+            <div class="card  card-tasks">
+              <div class="card-header ">
+                
+                <h4 class="card-title">PAYROLL</h4>
+              </div>
+              <div class="card-body ">
+                <div class="table-full-width ">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox" checked>
+                              <span class="form-check-sign"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td class="text-left">Last payment <br><h2 class="text-bold">$100,000</h2></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox">
+                              <span class="form-check-sign"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td class="text-left">Performance Metrics <br><h2 class="text-bold">$100,000,000</h2></td>
+                       
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                  <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+        
+                <!-- <h4 class="card-title"> Employees Stats</h4> -->
+              </div>
+              <div class="card-body">
+                  <canvas id="barChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+         <!-- Contact -->
+         <div class="row">
+          <div class="col-md-12">
+            <div class="card-tasks">
+               <div class="card-title">
+                <div>
+                  <canvas id="myChart" ></canvas>
+                </div>
+          
+                </div>
+              </div>
+              <div class="card-body ">
+          
                 <div class="">
                 
                 </div>
               </div>
              <hr>
+            </div>
+          </div>
+          
+              </div>
+        
             </div>
           </div>
          
@@ -188,4 +227,51 @@
   <script src="js/now-ui-dashboard.min.js"></script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+  var ctx = document.getElementById("myChart").getContext('2d');
+
+var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ["Remote Workers","Contract Staff", "Vendor", "Employees", "Part-Time Workers"],
+    datasets: [{
+      backgroundColor: [
+        "#2ecc71",
+        "#3498db",
+        "#95a5a6",
+        "#9b59b6",
+        "#f1c40f",
+        "#e74c3c",
+        "#34495e"
+      ],
+      data: [12, 10, 13, 17, 28]
+    }]
+  }
+});
+</script>
+<script type="text/javascript">
+  var ctx = document.getElementById("barChart").getContext('2d');
+
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["M", "T", "W", "T", "F", "S", "S"],
+    datasets: [{
+      label: 'Performance Metrics',
+      backgroundColor: [
+        "#2ecc71",
+        "#3498db",
+        "#95a5a6",
+        "#9b59b6",
+        "#f1c40f",
+        "#e74c3c",
+        "#34495e"
+      ],
+      data: [12, 19, 3, 17, 28, 24, 7]
+    }]
+  }
+});
+</script>
+
 </html>
